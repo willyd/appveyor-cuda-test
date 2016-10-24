@@ -5,9 +5,9 @@ echo Installing CUDA toolkit 8
 cuda_8.0.44_windows.exe -s compiler_8.0 ^
                            cublas_8.0 ^
                            cublas_dev_8.0 ^
-                           cudart_8.0 ^                
+                           cudart_8.0 ^
                            curand_8.0 ^
-                           curand_dev_8.0                           
+                           curand_dev_8.0
 
 dir .
 
