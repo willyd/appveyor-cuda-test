@@ -5,6 +5,14 @@ echo Installing CUDA toolkit 8
 cuda_8.0.44_windows.exe -s CUDAToolkit_8.0
 cuda_8.0.44_windows.exe -s CUDAVisualStudioIntegration_8.0
 
+dir .
+
+dir "%ProgramFiles%"
+dir "C:\Program Files"
+dir "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA"
+dir "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0"
+dir "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\bin"
+
 if NOT EXIST "%ProgramFiles%\NVIDIA GPU Computing Toolkit\CUDA\v8.0\bin\cudart64_80.dll" ( 
 echo "Failed to install CUDA"
 exit /B 1
