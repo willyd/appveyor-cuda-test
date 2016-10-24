@@ -5,20 +5,9 @@ echo Installing CUDA toolkit 8
 cuda_8.0.44_windows.exe -s compiler_8.0 ^
                            cublas_8.0 ^
                            cublas_dev_8.0 ^
-                           cudart_8.0 ^
-                           cufft_8.0 ^
-                           cufft_dev_8.0 ^
+                           cudart_8.0 ^                
                            curand_8.0 ^
-                           curand_dev_8.0 ^
-                           cusolver_8.0 ^
-                           cusolver_dev_8.0 ^
-                           cusparse_8.0 ^
-                           cusparse_dev_8.0 ^
-                           npp_8.0 ^
-                           npp_dev_8.0 ^
-                           nvrtc_8.0 ^
-                           nvrtc_dev_8.0 ^
-                           nvml_dev_8.0
+                           curand_dev_8.0                           
 
 dir .
 
@@ -32,3 +21,7 @@ if NOT EXIST "%ProgramFiles%\NVIDIA GPU Computing Toolkit\CUDA\v8.0\bin\cudart64
 echo "Failed to install CUDA"
 exit /B 1
 )
+
+set PATH=%ProgramFiles%\NVIDIA GPU Computing Toolkit\CUDA\v8.0\bin;%ProgramFiles%\NVIDIA GPU Computing Toolkit\CUDA\v8.0\libnvvp;%PATH%
+
+nvcc -V
